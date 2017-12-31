@@ -9,20 +9,28 @@
             "complex_modifications": {
                 "parameters": {
                     "basic.to_delayed_action_delay_milliseconds": 500,
-                    "basic.to_if_alone_timeout_milliseconds": 1000
+                    "basic.to_if_alone_timeout_milliseconds": 1000,
+                    "basic.to_if_held_down_threshold_milliseconds": 500
                 },
                 "rules": [
                     {
                         "description": "back back on google chrome",
                         "manipulators": [
                             {
-                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "a",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
-                                       ]
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -33,14 +41,7 @@
                                         }
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_if",
-                                        "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome"
-                                        ]
-                                    }
-                                ]
+                                "type": "basic"
                             }
                         ]
                     },
@@ -48,13 +49,20 @@
                         "description": "go forward on google chrome",
                         "manipulators": [
                             {
-                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
-                                       ]
+                                        ]
                                     }
                                 },
                                 "to": [
@@ -65,14 +73,7 @@
                                         }
                                     }
                                 ],
-                                "conditions": [
-                                    {
-                                        "type": "frontmost_application_if",
-                                        "bundle_identifiers": [
-                                            "^com\\.google\\.Chrome"
-                                        ]
-                                    }
-                                ]
+                                "type": "basic"
                             }
                         ]
                     },
@@ -80,13 +81,12 @@
                         "description": "cntrol + n to delete",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
-                                       ],
+                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -96,7 +96,8 @@
                                     {
                                         "key_code": "delete_or_backspace"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -104,7 +105,6 @@
                         "description": "cntrol + q to escape",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": {
@@ -117,7 +117,8 @@
                                     {
                                         "key_code": "escape"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -125,13 +126,12 @@
                         "description": "cntrol + space to enter",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
-                                       ],
+                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -141,7 +141,8 @@
                                     {
                                         "key_code": "return_or_enter"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -149,12 +150,11 @@
                         "description": "cntrol + h to left_arrow",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ],
                                         "optional": [
                                             "any"
@@ -165,7 +165,8 @@
                                     {
                                         "key_code": "left_arrow"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -173,12 +174,11 @@
                         "description": "cntrol + j to left_arrow",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ],
                                         "optional": [
                                             "any"
@@ -189,7 +189,8 @@
                                     {
                                         "key_code": "down_arrow"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -197,12 +198,11 @@
                         "description": "cntrol + j to up_arrow",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ],
                                         "optional": [
                                             "any"
@@ -213,7 +213,8 @@
                                     {
                                         "key_code": "up_arrow"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -221,12 +222,11 @@
                         "description": "cntrol + l to right_arrow",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ],
                                         "optional": [
                                             "any"
@@ -237,7 +237,8 @@
                                     {
                                         "key_code": "right_arrow"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -245,12 +246,11 @@
                         "description": "cntrol + m to hyphen",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "m",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ]
                                     }
                                 },
@@ -258,7 +258,8 @@
                                     {
                                         "key_code": "hyphen"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -266,12 +267,11 @@
                         "description": "cntrol + ; to :",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "semicolon",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ]
                                     }
                                 },
@@ -282,7 +282,8 @@
                                             "mandatory": "left_shift"
                                         }
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -290,12 +291,11 @@
                         "description": "cntrol + single_quotation to double_quotation",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "quote",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ]
                                     }
                                 },
@@ -306,7 +306,8 @@
                                             "mandatory": "left_shift"
                                         }
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -314,12 +315,11 @@
                         "description": "cntrol + 1 to !",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "1",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ]
                                     }
                                 },
@@ -330,7 +330,8 @@
                                             "mandatory": "left_shift"
                                         }
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -338,12 +339,11 @@
                         "description": "cntrol + 2 to @",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "2",
                                     "modifiers": {
                                         "mandatory": [
-                                          "control"
+                                            "control"
                                         ]
                                     }
                                 },
@@ -354,13 +354,11 @@
                                             "mandatory": "left_shift"
                                         }
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
-                   
-
-
                     {
                         "description": "コマンドキーを単体で押したときに、英数・かなキーを送信する。（左コマンドキーは英数、右コマンドキーはかな） (rev 2)",
                         "manipulators": [
