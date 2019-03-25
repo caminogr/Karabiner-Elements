@@ -273,27 +273,6 @@
                         ]
                     },
                     {
-                        "description": "cntrol + m to hyphen",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "m",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "hyphen"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "cntrol + ; to :",
                         "manipulators": [
                             {
