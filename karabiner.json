@@ -65,9 +65,7 @@
                                 "to": [
                                     {
                                         "key_code": "open_bracket",
-                                        "modifiers": {
-                                            "mandatory": "command"
-                                        }
+                                        "modifiers": "command"
                                     }
                                 ],
                                 "type": "basic"
@@ -98,9 +96,7 @@
                                 "to": [
                                     {
                                         "key_code": "close_bracket",
-                                        "modifiers": {
-                                            "mandatory": "command"
-                                        }
+                                        "modifiers": "command"
                                     }
                                 ],
                                 "type": "basic"
@@ -287,9 +283,7 @@
                                 "to": [
                                     {
                                         "key_code": "semicolon",
-                                        "modifiers": {
-                                            "mandatory": "left_shift"
-                                        }
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -311,9 +305,7 @@
                                 "to": [
                                     {
                                         "key_code": "quote",
-                                        "modifiers": {
-                                            "mandatory": "left_shift"
-                                        }
+                                        "modifiers":  "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -335,9 +327,7 @@
                                 "to": [
                                     {
                                         "key_code": "1",
-                                        "modifiers": {
-                                            "mandatory": "left_shift"
-                                        }
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -359,9 +349,7 @@
                                 "to": [
                                     {
                                         "key_code": "2",
-                                        "modifiers": {
-                                            "mandatory": "left_shift"
-                                        }
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
@@ -383,9 +371,7 @@
                                 "to": [
                                     {
                                         "key_code": "3",
-                                        "modifiers": {
-                                            "mandatory": "left_shift"
-                                        }
+                                        "modifiers": "left_shift"
                                     }
                                 ],
                                 "type": "basic"
